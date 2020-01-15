@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+exports.SIGN_UP = '/signup';
+exports.SIGN_IN = '/signin';
+exports.HOME = '/';
+exports.ACCOUNT = '/account';
+exports.PASSWORD_FORGET = '/forget_password';
+exports.ABOUT = '/about';
+exports.NEWS = '/news';
+exports.DETAILED = '/detailed/:id';
