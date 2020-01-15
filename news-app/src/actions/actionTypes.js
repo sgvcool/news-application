@@ -50,3 +50,17 @@ exports.rateArticle = function (id, rate) {
         rate: rate
     };
 };
+exports.addComment = function (id, comment) {
+    return {
+        type: articleActions_1.ADD_COMMENT,
+        id: id,
+        comment: comment
+    };
+};
+exports.addComplain = function (id, complain) {
+    return {
+        type: articleActions_1.ADD_COMPLAIN,
+        id: id,
+        complain: complain
+    };
+};
