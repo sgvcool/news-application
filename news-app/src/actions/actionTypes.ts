@@ -1,5 +1,6 @@
 import {ADD_NEWS, EDIT_NEWS, LOAD_NEWS, REMOVE_NEWS} from "./newsAction";
 import {Article} from "../enteties/Article";
+import {ADD_TO_FAVORITE, ADD_TO_READ_LATER, MARK_AS_READ, RATE_ARTICLE} from "./articleActions";
 
 export const loadNews = () : NewsActionType => {
     return {
@@ -25,6 +26,35 @@ export const editNews = (article : Article) : NewsActionType => {
     return {
         type: EDIT_NEWS,
         article
+    }
+}
+
+export const markAsRead = (id: string): ArticleActionType =>{
+    return{
+        type: MARK_AS_READ,
+        id
+    }
+}
+
+export const addToFavorite = (id: string): ArticleActionType =>{
+    return{
+        type: ADD_TO_FAVORITE,
+        id
+    }
+}
+
+export const addToReadLater = (id: string): ArticleActionType =>{
+    return{
+        type: ADD_TO_READ_LATER,
+        id
+    }
+}
+
+export const rateArticle = (id: string, rate: number): ArticleActionType =>{
+    return{
+        type: RATE_ARTICLE,
+        id,
+        rate
     }
 }
 
